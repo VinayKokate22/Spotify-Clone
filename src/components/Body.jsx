@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { reducerCases } from "../utils/Constants";
 import { useStateProvider } from "../utils/StateProvider";
-
+import "./body.css";
 const Body = () => {
-  const [{ token, selectedPlaylistId, selectedPlaylist }, dispatch] =
+  const [{ token, selectedPlaylistId, selectedPlaylist, userInfo }, dispatch] =
     useStateProvider();
 
   useEffect(() => {
@@ -38,13 +38,61 @@ const Body = () => {
           };
         }),
       };
-      dispatch({ type: reducerCases.SET_PLAYLISTS, selectedPlaylist });
+      dispatch({ type: reducerCases.SET_PLAYLIST, selectedPlaylist });
     };
     getInitialPlaylist();
   }, [token, dispatch, selectedPlaylistId]);
+  const mstoMinutes = (ms) => {
+    var minutes = Math.floor(ms / 60000);
+    var seconds = ((ms % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  };
   return (
-    <div>
-      <div>body</div>
+    <div className="body">
+      {selectedPlaylist && (
+        <div className="playlist">
+          <div className="playlist_title">
+            <img src={selectedPlaylist.image} alt="playlist image" />
+            <div className="playlist_title_name">
+              <span>Playlist</span>
+              <h2>{selectedPlaylist.name}</h2>
+              <div className="playlist_title_name_userinfo">
+                <span>{userInfo.userName}</span>
+                <span>.</span>
+                <span>{selectedPlaylist.tracks.length} songs</span>
+              </div>
+            </div>
+          </div>
+          <div className="playlist_song_list">
+            <ol className="orderlist_of_song">
+              {selectedPlaylist.tracks.map((song, index) => {
+                return (
+                  <li>
+                    <div className="playlist_song_list_info">
+                      <div className="song_index">
+                        <h4>{index + 1}</h4>
+                      </div>
+                      <div className="song_info">
+                        <img src={song.image} alt="song_image" />
+                        <div className="song_name">
+                          <h4>{song.name}</h4>
+                          <h5>{song.artists}</h5>
+                        </div>
+                      </div>
+                      <div className="song_album">
+                        <h5>{song.album}</h5>
+                      </div>
+                      <div className="song_duration">
+                        <h5>{mstoMinutes(song.duration)}</h5>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

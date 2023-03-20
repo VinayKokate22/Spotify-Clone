@@ -38,9 +38,9 @@ input:focus {
   width: 10rem;
 }
 .navbar .userinfo i {
-  color: white;
+  color: #adadad;
 }
 .navbar .userinfo a {
-  color: white;
+  color: #adadad;
   text-decoration: none;
 }

@@ -20,7 +20,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
   cursor: pointer;
 }
 .sidebar .top-links ul li {

@@ -1,7 +1,12 @@
 import React from "react";
+import CurrentTract from "./CurrentTract";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div>
+      <CurrentTract />
+    </div>
+  );
 };
 
 export default Footer;

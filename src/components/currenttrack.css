@@ -1,0 +1,21 @@
+.currenttrack {
+  display: flex;
+  padding: 1rem;
+}
+
+.currenttrack_info {
+  display: flex;
+  gap: 1rem;
+}
+.currentsong_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.currentsong_name h4 {
+  color: white;
+}
+.currentsong_name h5 {
+  color: #adadad;
+}

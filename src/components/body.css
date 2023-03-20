@@ -1,0 +1,85 @@
+.body {
+  overflow-x: hidden;
+  max-height: 77.5vh;
+}
+.playlist_title {
+  display: flex;
+  align-items: end;
+  gap: 1.5rem;
+  color: white;
+  padding: 2rem;
+}
+.playlist_title img {
+  width: 15rem;
+  box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.491);
+}
+.playlist_title h2 {
+  font-size: 6rem;
+  font-weight: 900;
+  word-spacing: -0.5rem;
+}
+.playlist_title_name {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.playlist_title_name_userinfo {
+  display: flex;
+  gap: 0.5rem;
+}
+.playlist_song_list {
+  color: white;
+  padding: 2rem 2rem;
+  background: linear-gradient(transparent, rgb(16, 16, 16));
+}
+
+.orderlist_of_song {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.playlist_song_list_info {
+  display: flex;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+}
+.playlist_song_list_info:hover {
+  background-color: rgba(255, 255, 255, 0.084);
+}
+.song_index {
+  flex: 0.1;
+}
+.song_index h4 {
+  color: #adadad;
+}
+.song_info {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 1rem;
+}
+.song_info img {
+  width: 2.7rem;
+}
+.song_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.song_name h5 {
+  color: #adadad;
+}
+.song_album {
+  color: #adadad;
+
+  flex: 1;
+}
+.song_duration {
+  color: #adadad;
+  text-align: end;
+  flex: 1;
+}

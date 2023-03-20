@@ -15,15 +15,15 @@
   gap: 0.5rem;
 }
 
-.playlist ul::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
 }
-.playlist ul::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: gray;
 
   border-radius: 3px;
 }
-.playlist ul::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: rgb(58, 58, 58);
 }
 .playlist ul li {
