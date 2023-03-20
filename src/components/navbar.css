@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+}
+.navbar .searchbar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  width: 23rem;
+  /* margin-left: 7rem; */
+}
+.navbar .searchbar i {
+  font-size: 1.4rem;
+}
+.navbar .searchbar input {
+  background-color: transparent;
+  border: none;
+  padding: 0rem 1rem;
+  border-radius: 2rem;
+  color: black;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+input:focus {
+  outline: none;
+}
+.navbar .userinfo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 1rem;
+  width: 10rem;
+}
+.navbar .userinfo i {
+  color: white;
+}
+.navbar .userinfo a {
+  color: white;
+  text-decoration: none;
+}

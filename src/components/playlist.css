@@ -1,0 +1,31 @@
+.playlist {
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+.playlist ul {
+  max-height: 50vh;
+  overflow: auto;
+  color: white;
+  list-style: none;
+  font-weight: 600;
+  font-size: 0.94rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.playlist ul::-webkit-scrollbar {
+  width: 5px;
+}
+.playlist ul::-webkit-scrollbar-thumb {
+  background: gray;
+
+  border-radius: 3px;
+}
+.playlist ul::-webkit-scrollbar-track {
+  background: rgb(58, 58, 58);
+}
+.playlist ul li {
+  cursor: pointer;
+}
