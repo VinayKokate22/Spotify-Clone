@@ -4,7 +4,7 @@ const Login = () => {
   const handleClick = () => {
     // console.log("hdsjf");
     const client_id = "8a8f809ba3b64f429246a57f5bbd8394";
-    const redirect_uri = "http://localhost:5173/";
+    const redirect_uri = "https://spotify-clone-nu-inky.vercel.app/";
     const api_uri = "https://accounts.spotify.com/authorize";
     const scope = [
       "user-library-modify",
