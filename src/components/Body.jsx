@@ -47,6 +47,16 @@ const Body = () => {
     var seconds = ((ms % 60000) / 1000).toFixed(0);
     return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
   };
+  const changeCurrentSong = (id, name, artists, image) => {
+    const currentlyPlaying = {
+      id: id,
+      name: name,
+      artists: artists,
+      image: image,
+    };
+
+    dispatch({ type: reducerCases.SET_PLAYING, currentlyPlaying });
+  };
   return (
     <div className="body">
       {selectedPlaylist && (
@@ -67,7 +77,17 @@ const Body = () => {
             <ol className="orderlist_of_song">
               {selectedPlaylist.tracks.map((song, index) => {
                 return (
-                  <li>
+                  <li
+                    key={index}
+                    onClick={() =>
+                      changeCurrentSong(
+                        song.id,
+                        song.name,
+                        song.artists,
+                        song.image
+                      )
+                    }
+                  >
                     <div className="playlist_song_list_info">
                       <div className="song_index">
                         <h4>{index + 1}</h4>

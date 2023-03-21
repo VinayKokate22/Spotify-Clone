@@ -1,0 +1,22 @@
+.song_toggle_option {
+  flex: 1;
+}
+.song_toggle_option ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.song_toggle_option ul li {
+  color: #adadad;
+  font-size: 1.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.song_toggle_option ul li:hover {
+  color: white;
+}
+.fa-circle-play {
+  font-size: 2.3rem;
+  color: white;
+}

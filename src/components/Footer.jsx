@@ -1,10 +1,12 @@
 import React from "react";
 import CurrentTract from "./CurrentTract";
+import PlayerControl from "./PlayerControl";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="currenttrack">
       <CurrentTract />
+      <PlayerControl />
     </div>
   );
 };

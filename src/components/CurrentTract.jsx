@@ -31,13 +31,11 @@ const CurrentTract = () => {
     getCurrentTrack();
   }, [token, dispatch]);
   return (
-    <div className="currenttrack">
-      <div className="currenttrack_info">
-        <img src={currentlyPlaying?.image} alt="song_image" />
-        <div className="currentsong_name">
-          <h4>{currentlyPlaying?.name}</h4>
-          <h5>{currentlyPlaying?.artists}</h5>
-        </div>
+    <div className="currenttrack_info">
+      <img src={currentlyPlaying?.image} alt="song_image" />
+      <div className="currentsong_name">
+        <h4>{currentlyPlaying?.name}</h4>
+        <h5>{currentlyPlaying?.artists}</h5>
       </div>
     </div>
   );
